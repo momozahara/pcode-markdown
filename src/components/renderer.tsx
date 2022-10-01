@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import highlightTheme from "react-syntax-highlighter/dist/esm/styles/prism/one-light";
@@ -117,6 +117,9 @@ export function headingRenderer(props: HeadingProps) {
   let href: string = children ? `${children.toString().toLowerCase()}` : "#";
   const child = node.children[0];
   if (child && child.type === "element" && child.tagName === "a") {
+    if (child.children.length <= 0) {
+      return <></>;
+    }
     if (child.children[0].type === "text") {
       href = `${child.children[0].value
         .replace(/[^a-zA-Z ]/g, "")
