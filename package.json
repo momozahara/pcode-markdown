@@ -1,63 +1,45 @@
 {
   "name": "pcode-markdown",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint **/*.{js,jsx,ts,tsx,json}",
-    "lint:fix": "eslint **/*.{js,jsx,ts,tsx,json} --fix"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.10.6",
-    "@mui/material": "^5.10.7",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^18.0.0",
-    "@types/react-copy-to-clipboard": "^5.0.4",
-    "@types/react-dom": "^18.0.0",
-    "@types/react-syntax-highlighter": "^15.5.5",
-    "@typescript-eslint/parser": "^5.38.1",
-    "eslint": "^8.24.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.8",
-    "prettier": "^2.7.1",
+    "@mui/icons-material": "^5.10.15",
+    "@mui/material": "^5.10.15",
     "react": "^18.2.0",
     "react-ace": "^10.1.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.3",
     "react-markdown-css": "^1.0.2",
-    "react-scripts": "5.0.1",
     "react-syntax-highlighter": "^15.5.0",
     "rehype-katex": "^6.0.2",
     "rehype-raw": "^6.1.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
-    "typescript": "^4.4.2"
+    "vite-tsconfig-paths": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-copy-to-clipboard": "^5.0.4",
+    "@types/react-dom": "^18.0.8",
+    "@types/react-syntax-highlighter": "^15.5.5",
+    "@typescript-eslint/parser": "^5.44.0",
+    "@vitejs/plugin-react": "^2.2.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "prettier": "^2.8.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3"
   }
 }

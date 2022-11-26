@@ -30,6 +30,8 @@ const example = `# Example
 * [ ] check
 * [x] check
 
+[go to](#httpspcodedev) url anchor
+
 \`\`\`js
 console.log("GG")
 \`\`\`

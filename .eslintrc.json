@@ -3,6 +3,11 @@
     "browser": true,
     "es2021": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -39,8 +44,5 @@
       }
     ]
   },
-  "ignorePatterns": [
-    "postcss.config.js",
-    "tailwind.config.js"
-  ]
+  "ignorePatterns": []
 }
