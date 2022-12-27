@@ -115,7 +115,7 @@ export function headingRenderer(props: HeadingProps) {
   const { node, level, children } = props;
 
   let href: string = children
-    ? `${children.toString().replace(" ", "-").toLowerCase()}`
+    ? `${children.toString().replaceAll(" ", "-").toLowerCase()}`
     : "#";
   const child = node.children[0];
   if (child && child.type === "element" && child.tagName === "a") {
