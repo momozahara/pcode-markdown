@@ -1,5 +1,5 @@
-import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import highlightTheme from "react-syntax-highlighter/dist/esm/styles/prism/one-light";
 import {
