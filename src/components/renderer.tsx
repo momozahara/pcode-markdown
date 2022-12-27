@@ -114,7 +114,9 @@ function Anchor(props: AnchorProps) {
 export function headingRenderer(props: HeadingProps) {
   const { node, level, children } = props;
 
-  let href: string = children ? `${children.toString().toLowerCase()}` : "#";
+  let href: string = children
+    ? `${children.toString().replace(" ", "-").toLowerCase()}`
+    : "#";
   const child = node.children[0];
   if (child && child.type === "element" && child.tagName === "a") {
     if (child.children.length <= 0) {
