@@ -70,12 +70,23 @@ $$
 $$`;
 
 const Editor = () => {
-  const [markdownSource, setMarkdownSouce] = useState(example);
+  const [markdownSource, setMarkdownSouce] = useState("");
   const [showPreview, setShowPreview] = useState(false);
 
   useEffect(() => {
-    setMarkdownSouce(example);
+    let item = localStorage.getItem("markdownSource");
+    if (item) {
+      setMarkdownSouce(item);
+    } else {
+      setMarkdownSouce(example);
+    }
   }, []);
+
+  useEffect(() => {
+    if (markdownSource.length !== 0) {
+      localStorage.setItem("markdownSource", markdownSource);
+    }
+  }, [markdownSource]);
 
   return (
     <>
